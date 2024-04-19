@@ -1,0 +1,122 @@
+@import "../../responsive.scss";
+
+.searchBar {
+  .type {
+
+
+    button {
+      padding: 16px 36px;
+      border: 1px solid #999;
+      border-radius: 5px;
+      margin-right: 10px;
+      // border-bottom: none;
+      cursor: pointer;
+      background-color: white;
+      text-transform: capitalize;
+      transition: all 400ms ease;
+
+      &.active {
+        background-color: black;
+        color: white;
+        // transition: background-color 120ms ease-in-out, box-shadow 120ms ease-in-out, color 120ms ease-in-out;
+        transition: all 400ms ease;
+      }
+
+      &:first-child {
+        border-top-left-radius: 5px;
+        box-shadow: 4px 4px 4px 6px rgba(128, 128, 128, 0.2);
+        border: none;
+        transition: all 400ms ease;
+      }
+
+      &:last-child {
+        border-top-right-radius: 5px;
+        box-shadow: 4px 4px 4px 6px rgba(128, 128, 128, 0.2);
+        border: none;
+        transition: all 400ms ease;
+      }
+    }
+  }
+
+  form {
+    margin-top: 10px;
+    border: 1px solid #999;
+    display: flex;
+    border-radius: 5px;
+    justify-content: space-between;
+    height: 64px;
+    gap: 5px;
+
+    @include sm {
+      flex-direction: column;
+      border: none;
+    }
+
+    input {
+      border: none;
+      padding: 0px 10px;
+      border-radius: 10px;
+      width: 200px;
+
+      @include lg {
+        padding: 0px 5px;
+
+        &:nth-child(2),
+        &:nth-child(3) {
+          width: 140px;
+        }
+      }
+
+      @include md {
+        width: 200px;
+
+        &:nth-child(2),
+        &:nth-child(3) {
+          width: 200px;
+        }
+      }
+
+      @include sm {
+        width: auto;
+
+        &:nth-child(2),
+        &:nth-child(3) {
+          width: auto;
+        }
+
+        padding: 20px;
+        border: 1px solid #999;
+      }
+    }
+
+    a {
+      flex: 1;
+      background-color: #1a9cb8;
+      display: flex;
+      align-items: center;
+      border-radius: 10px;
+      margin-right: 5px;
+      margin-top: 2px;
+      margin-bottom: 2px;
+      justify-content: center;
+
+      button {
+        border: none;
+        cursor: pointer;
+        background-color: #1a9cb8;
+        flex: 1;
+
+        @include sm {
+          padding: 10px;
+        }
+
+        img {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+
+
+  }
+}
